@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckDev Studio - Desarrollo Web Profesional para Empresas Peruanas</title>
+    <meta name="description"
+        content="Creamos sitios web profesionales, e-commerce y sistemas personalizados para empresas peruanas. Plantillas premium y desarrollos a medida.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-slate-950 text-white">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51999999999?text=Hola%20DuckDev%20Studio,%20quiero%20información%20sobre%20sus%20servicios"
+        target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar-glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="logo-svg">
+                        <!-- Logo SVG inline -->
+                        <svg width="50" height="50" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(15, 15)">
+                                <path
+                                    d="M 30 20 L 45 20 Q 52 20, 52 27 L 52 45 Q 52 52, 45 52 L 30 52 Q 23 52, 23 45 L 23 27 Q 23 20, 30 20"
+                                    fill="#06B6D4" />
+                                <circle cx="35" cy="12" r="8" fill="#06B6D4" />
+                                <rect x="32" y="12" width="6" height="8" fill="#06B6D4" />
+                                <path d="M 41 12 L 48 10 L 48 14 Z" fill="#FBBF24" />
+                                <circle cx="37" cy="11" r="1.5" fill="white" />
+                                <path d="M 32 30 Q 28 35, 32 40" stroke="#38BDF8" stroke-width="2" fill="none"
+                                    opacity="0.5" />
+                                <path d="M 23 40 L 18 38 L 20 43 Z" fill="#0EA5E9" />
+                                <path d="M 23 44 L 18 42 L 20 47 Z" fill="#0891B2" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">DuckDev <span class="text-cyan-400">Studio</span></h1>
+                        <p class="text-xs text-slate-400 font-mono">Web Development</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#plantillas" class="nav-link">Plantillas</a>
+                    <a href="#proceso" class="nav-link">Proceso</a>
+                    <a href="#contacto" class="btn-primary">Contactar</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="mobile-link">Inicio</a>
+                <a href="#servicios" class="mobile-link">Servicios</a>
+                <a href="#plantillas" class="mobile-link">Plantillas</a>
+                <a href="#proceso" class="mobile-link">Proceso</a>
+                <a href="#contacto" class="mobile-link">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-bg-elements">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="hero-blob hero-blob-3"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <div data-aos="fade-up">
+                <span class="hero-badge">
+                    🚀 Transformamos ideas en realidad digital
+                </span>
+            </div>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                Desarrollo Web<br />
+                <span class="gradient-text">Profesional</span> para<br />
+                Empresas Peruanas
+            </h1>
+
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                Sitios web modernos, e-commerce funcionales y sistemas personalizados.
+                <span class="text-cyan-400 font-semibold">Desde S/. 1,500</span>
+            </p>
+
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="#plantillas" class="btn-primary btn-lg">Ver Plantillas Demo</a>
+                <a href="#contacto" class="btn-secondary btn-lg">Solicitar Cotización</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                <div class="stat-item">
+                    <div class="stat-number gradient-text">50+</div>
+                    <div class="stat-label">Proyectos Entregados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number gradient-text">98%</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number gradient-text">24/7</div>
+                    <div class="stat-label">Soporte Técnico</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number gradient-text">15 días</div>
+                    <div class="stat-label">Entrega Promedio</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section-padding bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header">
+                <span class="section-tag" data-aos="fade-up">Nuestros Servicios</span>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    Soluciones Web <span class="gradient-text">Completas</span>
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Desde plantillas listas para usar hasta desarrollos completamente personalizados
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon bg-cyan-500/10">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Plantillas Premium</h3>
+                    <p class="service-description">Sitios web profesionales listos para personalizar. Diseños modernos
+                        optimizados para conversión.</p>
+                    <div class="service-price">Desde S/. 1,500</div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon bg-blue-500/10">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">E-Commerce Completo</h3>
+                    <p class="service-description">Tiendas online funcionales con carrito, pasarela de pagos e
+                        inventario integrado.</p>
+                    <div class="service-price">Desde S/. 6,500</div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon bg-purple-500/10">
+                        <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Desarrollo Personalizado</h3>
+                    <p class="service-description">Sistemas web a medida, CRMs, portales y aplicaciones específicas para
+                        tu negocio.</p>
+                    <div class="service-price">Desde S/. 8,000</div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon bg-emerald-500/10">
+                        <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mantenimiento Web</h3>
+                    <p class="service-description">Actualizaciones, backups, seguridad y soporte técnico continuo para
+                        tu sitio.</p>
+                    <div class="service-price">Desde S/. 150/mes</div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon bg-orange-500/10">
+                        <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">SEO & Marketing</h3>
+                    <p class="service-description">Optimización para buscadores y estrategias de marketing digital para
+                        aumentar visitas.</p>
+                    <div class="service-price">Desde S/. 500/mes</div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon bg-pink-500/10">
+                        <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Diseño UI/UX</h3>
+                    <p class="service-description">Interfaces intuitivas y experiencias de usuario que generan
+                        engagement y conversiones.</p>
+                    <div class="service-price">Consultar precio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="plantillas" class="section-padding bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header">
+                <span class="section-tag" data-aos="fade-up">Nuestras Plantillas</span>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    Explora Nuestros <span class="gradient-text">Demos en Vivo</span>
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Plantillas funcionales que puedes probar ahora mismo
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="templates-grid">
+                <!-- Templates will be loaded by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#contacto" class="btn-primary btn-lg">
+                    ¿No encuentras lo que buscas? Solicita un proyecto personalizado
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="proceso" class="section-padding bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header">
+                <span class="section-tag" data-aos="fade-up">Cómo Trabajamos</span>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    Nuestro <span class="gradient-text">Proceso</span>
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Un flujo de trabajo probado que garantiza resultados excepcionales
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number">01</div>
+                    <h3 class="process-title">Consulta Inicial</h3>
+                    <p class="process-description">Conversamos sobre tu negocio, objetivos y requerimientos.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">02</div>
+                    <h3 class="process-title">Propuesta & Diseño</h3>
+                    <p class="process-description">Creamos mockups y wireframes antes de programar.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-number">03</div>
+                    <h3 class="process-title">Desarrollo</h3>
+                    <p class="process-description">Programamos con código limpio y demos semanales.</p>
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number">04</div>
+                    <h3 class="process-title">Lanzamiento</h3>
+                    <p class="process-description">Publicamos, capacitamos y brindamos soporte continuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section-padding bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header">
+                <span class="section-tag" data-aos="fade-up">Contáctanos</span>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    ¿Listo para <span class="gradient-text">Comenzar?</span>
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Cuéntanos sobre tu proyecto y te responderemos en menos de 24 horas
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+51 999 999 999">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Tipo de Servicio *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="plantilla">Plantilla Premium</option>
+                                <option value="ecommerce">E-Commerce</option>
+                                <option value="personalizado">Desarrollo Personalizado</option>
+                                <option value="mantenimiento">Mantenimiento Web</option>
+                                <option value="seo">SEO & Marketing</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Cuéntanos sobre tu proyecto *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Información de Contacto</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon bg-cyan-500/10">
+                                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact-label">Email</h4>
+                                    <a href="mailto:contacto@duckdevstudio.com" class="contact-link">
+                                        contacto@duckdevstudio.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon bg-green-500/10">
+                                    <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact-label">WhatsApp</h4>
+                                    <a href="https://wa.me/51999999999" target="_blank" class="contact-link">
+                                        +51 999 999 999
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon bg-blue-500/10">
+                                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact-label">Ubicación</h4>
+                                    <p class="text-slate-400">Lima, Perú</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>DuckDev <span class="text-cyan-400">Studio</span></h3>
+                        <p class="text-slate-400 text-sm font-mono">Web Development</p>
+                    </div>
+                    <p class="footer-description">
+                        Desarrollo web profesional para empresas peruanas. Transformamos ideas en experiencias digitales
+                        excepcionales.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#plantillas">Plantillas</a></li>
+                        <li><a href="#proceso">Proceso</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Plantillas Premium</li>
+                        <li>E-Commerce</li>
+                        <li>Desarrollo Personalizado</li>
+                        <li>Mantenimiento Web</li>
+                        <li>SEO & Marketing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 DuckDev Studio. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
